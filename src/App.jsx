@@ -14,10 +14,14 @@ const App = () => {
     <div>
       <Header />
       <Routes>
+
         <Route exact path='/' element={<Home />} />
         <Route exact path='/about' element={<About />} />
+
+        {/* //ProtectedRoute */}
         <Route element={<ProtectedRoute Component={Admin} />} exact path='/admin' />
         <Route element={<ProtectedRoute Component={Organization} />} exact path='/info' />
+        
         <Route exact path='/login' element={<Login />} />
       </Routes>
     </div>
